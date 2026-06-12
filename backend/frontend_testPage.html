@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Upload Test</title>
+</head>
+<body>
+
+<h2>Add Food</h2>
+
+<form action="http://localhost:8000/api/food/add" method="POST" enctype="multipart/form-data">
+
+  <input type="text" name="name" placeholder="Food Name"><br><br>
+
+  <input type="text" name="description" placeholder="Description"><br><br>
+
+  <input type="number" name="price" placeholder="Price"><br><br>
+
+  <input type="text" name="category" placeholder="Category"><br><br>
+
+  <input type="file" name="image"><br><br>
+
+  <button type="submit">Add Food</button>
+
+</form>
+
+</body>
+</html>

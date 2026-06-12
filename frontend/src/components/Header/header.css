@@ -1,0 +1,96 @@
+.header{
+    height:34vw ;
+    margin:30px auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.65));
+    z-index: 1;
+}
+
+.header-brand {
+    position: absolute;
+    top: 18px;
+    left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.header-logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.header-contents{
+    position:absolute;
+    display:flex;
+    flex-direction:  column ;
+    align-items:start;
+    gap:1.5vw;
+    max-width:50%;
+    bottom:10%;
+    left:6vw;
+    animation:fadeIn 3s;
+    z-index: 2;
+}
+.header-contents h2{
+    font-weight: 500;
+    color:aliceblue;
+    font-size: max(4.5vw,22px);
+}
+
+.header-contents p{
+    font-size: 1vw;
+    color: aliceblue;
+}
+
+.header-contents button{
+    border:none;
+    padding: 1vw 2.3vw;
+    color:#747474;
+    font-weight: 500;
+    background-color:aliceblue ;
+    font-size:max(1vw,13px);
+    cursor: pointer;
+    border-radius: 50px;
+
+}
+
+@media (max-width: 1050px){
+   
+    .header-contents{
+        max-width: 45%;
+    }
+
+}
+
+@media (max-width: 768px){
+    .header-contents{
+        max-width: 60%;
+    }
+    .header-contents p{
+        display: none;
+
+    }
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
+}
+
